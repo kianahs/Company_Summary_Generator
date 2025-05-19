@@ -1,6 +1,6 @@
 import asyncio
 import os
-from crawl4ai import AsyncWebCrawler
+from crawl4ai import AsyncWebCrawler, CrawlerRunConfig
 
 
 async def crawl_website(url, endpoint, company, dir_name):
@@ -11,7 +11,12 @@ async def crawl_website(url, endpoint, company, dir_name):
         os.makedirs(dir_name)
 
     async with AsyncWebCrawler() as crawler:
-        result = await crawler.arun(url=full_url)
+        result = await crawler.arun(url=full_url,
+                                    config=CrawlerRunConfig(
+                                        css_selector=[
+                                            "*:not([id*='cky']):not([class*='cky']):not([id*='cookie']):not([class*='cookie'])"
+                                        ]
+                                    ))
         md_result = result.markdown
 
         with open(f"{dir_name}/{company}_{endpoint}.md", "w", encoding="utf-8") as f:
