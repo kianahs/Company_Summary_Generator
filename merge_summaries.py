@@ -6,11 +6,6 @@ from datetime import datetime
 
 load_dotenv()
 
-client = OpenAI(
-    api_key=os.getenv("GROQ_API_KEY"),
-    base_url="https://api.groq.com/openai/v1",
-)
-
 
 def merge_summaries(client: OpenAI, llm_model: str, summaries: str, dir_name: str, summarize_llm: str) -> str:
     if not os.path.exists(dir_name):
