@@ -1,7 +1,16 @@
 
 # Company Summary Generator
 
-This project extracts and summarizes structured content from company websites using a configurable pipeline. It supports both traditional LLM summarization and Retrieval-Augmented Generation (RAG), using Groq, OpenAI, and Google GenAI APIs.
+This project extracts and summarizes structured content from company websites using a configurable pipeline. It supports both traditional LLM summarization and Retrieval-Augmented Generation (RAG), using Groq, OpenAI, and Google GenAI APIs. The final outputs are in this directory:
+
+```
+Outputs/
+└── filament/
+    └── Final Summary/
+        ├── RAG/
+        └── llama3-70b-8192/ or gpt-4.1-mini/
+```
+
 
 ---
 
