@@ -1,14 +1,7 @@
 #!/bin/bash
 
-REPO_URL="https://github.com/kianahs/Company_Summary_Generator.git"
-PROJECT_DIR="CompanySummaryGenerator"
 VENV_NAME="venv"
 CONFIG_FILE="config.json"
-
-
-echo "Cloning repository..."
-git clone "$REPO_URL" "$PROJECT_DIR"
-cd "$PROJECT_DIR" || exit 1
 
 
 echo "Creating virtual environment..."
