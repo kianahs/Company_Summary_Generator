@@ -1,8 +1,9 @@
 import re
 import os
+from typing import Optional
 
 
-def clean_scraped_text(text, dir_name, endpoint):
+def clean_scraped_text(text: str, dir_name: str, endpoint: str, navbar: Optional[list[str]] = None) -> str:
 
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
@@ -17,12 +18,9 @@ def clean_scraped_text(text, dir_name, endpoint):
 
     text = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', text)
 
-    navbar = [
-        "Home", "Features", "Why Syfter", "Resources",
-        "About Us", "Technical Information", "Contact", "Book A Demo"
-    ]
-    for elem in navbar:
-        text = re.sub(fr"{elem}\s*", '', text)
+    if navbar:
+        for elem in navbar:
+            text = re.sub(fr"{elem}\s*", '', text)
 
     text = re.sub(r'\n\s*[*•?]+\s*\n', '\n', text)
 
@@ -46,6 +44,11 @@ if __name__ == "__main__":
     directory = os.path.join(root_dir, company, scraped_dir)
     new_dir = "Cleaned scraped Data"
 
+    navbar = [
+        "Home", "Features", "Why Syfter", "Resources",
+        "About Us", "Technical Information", "Contact", "Book A Demo"
+    ]
+
     for file_name in os.listdir(directory):
         file_path = os.path.join(directory, file_name)
 
@@ -53,4 +56,4 @@ if __name__ == "__main__":
             raw_text = f.read()
 
         clean_text = clean_scraped_text(
-            raw_text, os.path.join(root_dir, company, new_dir), os.path.splitext(file_name)[0])
+            raw_text, os.path.join(root_dir, company, new_dir), os.path.splitext(file_name)[0], navbar)
