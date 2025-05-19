@@ -1,0 +1,21 @@
+{
+  "pipeline": {
+    "RAG": {
+      "active": true,
+      "free_plan": true
+    },
+    "free_summarizer_llm": true,
+    "free_merger_llm": true
+  },
+  "endpoints": [
+    "", "features", "why-syfter", "resources",
+    "about-us", "technical-information", "contact"
+  ],
+  "navbar": [
+    "Home", "Features", "Why Syfter", "Resources",
+    "About Us", "Technical Information", "Contact", "Book A Demo"
+  ],
+  "url": "https://filament.ai",
+  "company": "filament",
+  "root_dir": "Outputs"
+}
