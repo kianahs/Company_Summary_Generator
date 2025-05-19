@@ -3,7 +3,7 @@ import os
 from crawl4ai import AsyncWebCrawler, CrawlerRunConfig
 
 
-async def crawl_website(url, endpoint, company, dir_name):
+async def crawl_website(url: str, endpoint: str, company: str, dir_name: str) -> str:
 
     full_url = url + '/' + endpoint
 
