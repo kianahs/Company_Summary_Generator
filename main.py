@@ -7,6 +7,24 @@ import os
 from openai import OpenAI
 
 
+def get_client(free_plan: bool) -> tuple[str, OpenAI]:
+    if free_plan:
+        return (
+            "llama3-70b-8192",
+            OpenAI(
+                api_key=os.getenv("GROQ_API_KEY"),
+                base_url="https://api.groq.com/openai/v1"
+            )
+        )
+    else:
+        return (
+            "gpt-4.1-mini",
+            OpenAI(
+                api_key=os.getenv("OPENAI_API_KEY")
+            )
+        )
+
+
 async def main():
 
     endpoints = ['', 'features', 'why-syfter', 'resources',
@@ -19,19 +37,11 @@ async def main():
     company = "filament"
     root_dir = 'Outputs'
 
-    free_plan = True
+    free_summarizer_llm = False
+    free_merger_llm = False
 
-    if free_plan:
-        llm_model = "llama3-70b-8192"
-        client = OpenAI(
-            api_key=os.getenv("GROQ_API_KEY"),
-            base_url="https://api.groq.com/openai/v1",
-        )
-    else:
-        llm_model = "gpt-4.1-mini"
-        client = OpenAI(
-            api_key=os.getenv("OPENAI_API_KEY")
-        )
+    summarizer_llm_model, summarizer_client = get_client(free_summarizer_llm)
+    merger_llm_model, merger_client = get_client(free_merger_llm)
 
     summaries = []
 
@@ -48,12 +58,12 @@ async def main():
             text=markdown, dir_name=os.path.join(
                 root_dir, company, "Cleaned Scraped Data"), endpoint=item, navbar=navbar)
 
-        summary = summarize(client=client, llm_model=llm_model, content=clean_text, endpoint=item, dir_name=os.path.join(
-            root_dir, company, "Summaries", llm_model))
+        summary = summarize(client=summarizer_client, llm_model=summarizer_llm_model, content=clean_text, endpoint=item, dir_name=os.path.join(
+            root_dir, company, "Summaries", summarizer_llm_model))
         summaries.append(summary)
 
-    merge_summaries(client=client, llm_model=llm_model, summaries=summaries, dir_name=os.path.join(
-        root_dir, company, "Final Summary", llm_model), summarize_llm=llm_model)
+    merge_summaries(client=merger_client, llm_model=merger_llm_model, summaries=summaries, dir_name=os.path.join(
+        root_dir, company, "Final Summary", merger_llm_model), summarize_llm=summarizer_llm_model)
 
 if __name__ == "__main__":
     asyncio.run(main())
