@@ -8,11 +8,18 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
 from datetime import datetime
+from typing import List, Dict, Tuple, Union
+from langchain_core.documents import Document
+from langchain_core.vectorstores import VectorStore
+from langchain_core.embeddings import Embeddings
+from langchain_core.language_models.chat_models import BaseChatModel
 
 load_dotenv()
 
 
-def chunk_data(dir_path, splitter):
+def chunk_data(
+        dir_path: str,
+        splitter: RecursiveCharacterTextSplitter) -> List[Document]:
     documents = []
     for file_name in os.listdir(dir_path):
         if file_name.endswith(".md"):
@@ -25,11 +32,13 @@ def chunk_data(dir_path, splitter):
     return splitter.split_documents(documents)
 
 
-def build_vector_store(docs, embeddings):
+def build_vector_store(
+        docs: List[Document],
+        embeddings: Embeddings) -> VectorStore:
     return FAISS.from_documents(docs, embeddings)
 
 
-def choose_llm(free_plan):
+def choose_llm(free_plan: bool) -> Tuple[BaseChatModel, str]:
     if free_plan:
         return ChatGroq(
             model_name="llama3-70b-8192",
@@ -44,7 +53,7 @@ def choose_llm(free_plan):
         ), "gpt-4.1-mini"
 
 
-def execute_RAG_pipeline(dir_path, output_dir, free_plan):
+def execute_RAG_pipeline(dir_path: str, output_dir: str, free_plan: bool) -> None:
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=800, chunk_overlap=100)
 

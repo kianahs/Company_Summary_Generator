@@ -27,10 +27,15 @@ Syfter solves the following problems:
 1. The "buy vs build" problem by providing a tried and tested product suite that can be configured and customized to match a firm's investment thesis.
 2. The challenge of integrating and refreshing heterogeneous datasets to ensure data quality and accuracy.
 3. The need for proprietary tech and data to create valuable IP for firms.
-4. The difficulty of identifying and prioritizing opportunities, driving efficiency, and improving decision-making.
-5. The problem of having to choose between building a custom AI platform or using an off-the-shelf solution, Syfter provides a production-ready data pipelines that constantly monitor data quality and status of all internal and external data.
+4. The difficulty of identifying and prioritizing opportunities, driving efficiency in deal origination and market monitoring.
 
-Overall, Syfter is designed to help private equity firms and corporate finance organizations to fully productionize the use of AI in their workflows, providing a targeted and tailored solution to their specific needs.
+Syfter's AI-driven platform helps firms to:
+
+* Discover and originate new deals
+* Monitor key prospects and receive real-time updates
+* Apply filters to tailor searches and pinpoint precise opportunities
+* Integrate CRM systems to keep data up-to-date and gain accurate insights
+* Centralize all internal and external data into one view
 
 ## Notable Customers or Company Mentions
 Here is the list of companies or partners mentioned:
