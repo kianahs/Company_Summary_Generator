@@ -1,16 +1,31 @@
-Here is a structured company summary based on the provided website content:
+Here is the structured company report:
 
-**Company Description:**
-Filament AI is a data curation hub for private markets, leveraging AI-enabled technology to provide personalized solutions. The company's mission and values are not explicitly stated, but its purpose is to assist clients in the private markets sector. 
+**Company Description**
 
-**Products & Services:**
-Filament AI offers a data curation hub for private markets, utilizing AI technology to solve problems in this sector. The company provides personalized demos, information, and potential opportunities to its clients.**
+* Core mission: Not explicitly stated, but implied to be providing AI-enabled data curation hub for private markets.
+* Purpose: To assist clients with personalized demos, information, and potential opportunities.
+* Values: Not explicitly stated.
 
-**Leadership Team:**
-No information is available on the leadership team.
+**Products & Services**
 
-**Notable Customers or Mentions:**
-None mentioned on the website.
+* Filament Syfter: An AI-Enabled Data Curation Hub for Private Markets.
+* Problem solved: Not explicitly stated, but implied to be related to data curation and private markets.
 
-**Recent News:**
-No updates, blog posts, or press releases are highlighted on the site.
+**Leadership Team**
+
+* Not mentioned on the website.
+
+**Notable Customers or Mentions**
+
+* None mentioned on the website.
+
+**Recent News**
+
+* None mentioned on the website. No blog posts, updates, or press releases are highlighted on the site.
+
+Additional information:
+* Office address: 22 Tudor St, London EC4Y 0AY
+* Registered Address: 1 King William St, London EC4N 7AF
+* Company Number: 10180537
+* Registered in England and Wales
+* Contact email: hello@filament.ai and hello@filament.uk.com

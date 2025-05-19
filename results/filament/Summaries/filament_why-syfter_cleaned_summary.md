@@ -1,33 +1,38 @@
-Here is a structured company summary based on the provided website content:
+Here is the structured company report:
 
-**Company Description:**
+**Company Description**
 
-* Core mission: To provide an AI-enabled data curation hub for private markets, enabling clients to create proprietary datasets and gain competitive advantage.
-* Purpose: To help clients build and maintain proprietary datasets, and to provide a tailored solution for private market data.
-* Values: Specialization in private market data, proprietary dataset creation, and tailored solutions.
+* Core Mission: To provide an AI-enabled data curation hub for private markets, enabling clients to build proprietary datasets and strategic advantage.
+* Purpose: To help clients make informed decisions by providing a holistic view of their technology and data architecture.
+* Values: Not explicitly stated, but implied values include:
+	+ Specialization in private market specialists
+	+ Focus on proprietary dataset creation
+	+ Emphasis on customization and branding
+	+ Importance of data quality
+	+ Commitment to innovation and AI-powered strategy
 
-**Products & Services:**
+**Products & Services**
 
-* Filament Syfter, a white-label, AI-enabled data curation hub for private markets
+* Filament Syfter: A white-label, AI-enabled data curation hub for private markets
 * Proprietary database structure and management
-* Private market data specialists
-* Holistic view of technology and data architecture
+* Customization and branding options
+* Single Sign-On (SSO) integration
 * Partnerships with market-leading data providers
-* Onboarding program with branded communications and SSO**
+* Holistic view of technology and data architecture
 
-**Leadership Team:**
+**Leadership Team**
 
 * No specific leadership team members mentioned on the website.
 
-**Notable Customers or Mentions:**
+**Notable Customers or Mentions**
 
 * Cavendish (CEO, John Farrugia)
 * Astorg (Partner, Charles-Hubert Le Baron)
 * Silversmith Capital Partners (CTO, Bryan Landerman)
 
-**Recent News:**
+**Recent News**
 
 * Winners of Deal Origination Solution of the Year 2024
 * Winners of Best AI Product in the FS/Fintech category
 * Winners of the "Emerging Tech Company of The Year" South Coast Tech Awards
-* No specific blog posts or press releases highlighted on the site.
+* Blog updates and product communications available through subscription

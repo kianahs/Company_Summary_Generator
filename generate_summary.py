@@ -16,7 +16,7 @@ def summarize(content, endpoint, dir_name):
         os.makedirs(dir_name)
 
     prompt = f"""
-              You are a business analyst. Based on the website content below, generate a structured company summary with the following sections:
+              You are a business analyst. Based on the website content below, generate a structured company report with the following sections:
               1. Company Description : What is the company’s core mission, purpose, and values?
               2. Products & Services : What does the company offer? What problems do they solve?
               3. Leadership Team (if available): Who are the key individuals in leadership positions? Provide brief bios where possible.
@@ -27,7 +27,7 @@ def summarize(content, endpoint, dir_name):
               {content}
               --- WEBSITE CONTENT END ---
 
-              Be concise and informative. Use bullet points where appropriate. 
+              Be concise and informative. Use bullet points where appropriate. if you cant find any of the  the information above just leave that section empty. Include everything you find and its related to each section.
               """
 
     response = client.chat.completions.create(

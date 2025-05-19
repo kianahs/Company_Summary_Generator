@@ -1,27 +1,33 @@
-Here is a structured company summary based on the provided website content:
+Here is the structured company report:
 
-**Company Description:**
-Filament Syfter is an AI-driven data platform that helps private market firms create proprietary technology and data, enabling them to create valuable IP. The company's mission is to provide a production-ready data platform that solves the "buy vs build" dilemma, providing a customizable solution that meets the firm's investment thesis.
+**Company Description**
 
-**Values:**
+* Core mission: To provide an AI-enabled data curation hub for private markets to make informed investment decisions.
+* Purpose: To help firms create valuable IP by providing a private instance holding all their firms' data and configuring it to match their investment thesis.
+* Values: Not explicitly stated, but implied values include innovation, efficiency, and customer satisfaction.
 
-* AI-first approach
-* Data-driven decision making
-* Customer-centricity
-* Innovation and expertise in AI and machine learning
+**Products & Services**
 
-**Products & Services:**
+* Syfter: An AI-driven data platform that solves the "buy vs build" problem by providing a private instance with tried and tested product suites, configured to match the investment thesis.
+* Production-ready data pipelines that constantly monitor data quality and status of internal and external data.
+* Machine Learning models that can be trained with the firm's data to ensure accurate sector categorizations.
+* AI-first approach to ensure data architecture supports AI ambitions.
+* Features:
+	+ Discover similar companies using rules logic and Machine Learning.
+	+ GenAI tear sheets and notifications.
+	+ User interface and end-user tools comparable to popular CRMs and data vendor platforms.
+	+ Bi-directional CRM integration with Salesforce, Dealcloud, Microsoft Dynamics, and others.
 
-* Syfter, an AI-driven data platform
-* Data integration and partnership with leading platforms and data sources
-* Three-tiered pricing packages (Foundation, Advanced, Pro) with varying features and support levels
-* Customizable solutions for data curation, machine learning, and AI-driven insights
+**Leadership Team**
 
-**Leadership Team:**
-Not explicitly mentioned on the website. However, there is a mention of an "Account Director" who meets with clients on a regular basis (monthly, fortnightly, or weekly, depending on the tier).
+* Not available on the website.
 
-**Notable Customers or Mentions:**
-No specific customers mentioned on the website. However, the company mentions working closely with market leaders in the CRM and data vendor space, such as Salesforce, Dealcloud, and Microsoft Dynamics.
+**Notable Customers or Mentions**
 
-**Recent News:**
-The website does not have a dedicated news or blog section. However, there is a call-to-action to "Stay Updated!" and subscribe for the latest news, expert insights, and cutting-edge innovations.
+* Partners: Leading providers of data sources, including marketing tools, publications, news sources, CRM systems, internal documents, financial systems, deal management, and executive dashboards.
+* Data partners: Not explicitly mentioned, but implied to be leading providers.
+
+**Recent News**
+
+* Subscribe for the latest updates on Filament Syfter, expert insights, and cutting-edge AI innovations.
+* No specific news articles or press releases are highlighted on the site.

@@ -1,11 +1,14 @@
-Here is a structured company summary based on the provided website content:
+Here is the structured company report based on the provided website content:
 
-**Company Description:**
-Filament Syfter is an AI-enabled data curation hub for private markets. The company's mission and purpose are not explicitly stated, but its values can be inferred as prioritizing privacy, innovation, and customer communication.
+**Company Description**
 
-**Products & Services:**
-Filament Syfter offers:
+* Core mission: To provide an AI-enabled data curation hub for private markets
+* Purpose: To enable private markets with AI-driven data curation
+* Values: Not explicitly stated, but implied through the emphasis on AI innovation and customer privacy
 
+**Products & Services**
+
+* AI-enabled data curation hub
 * CRM Integrations
 * AI Policy
 * Custom Scores
@@ -13,14 +16,25 @@ Filament Syfter offers:
 * Domains
 * Machine Learning Overview
 * Data Sources Integrations
+* Demo requests
 
-These products and services aim to solve data curation and integration challenges in the private markets sector.**
+**Leadership Team**
 
-**Leadership Team:**
-No specific leadership team members or their bios are provided on the website.
+* Not explicitly mentioned on the website
 
-**Notable Customers or Mentions:**
-None are explicitly mentioned on the website.
+**Notable Customers or Mentions**
 
-**Recent News:**
-No specific news, updates, blog posts, or press releases are highlighted on the site. However, visitors can subscribe to stay updated on Filament Syfter's latest updates, expert insights, and cutting-edge AI innovations.
+* None explicitly mentioned on the website
+
+**Recent News**
+
+* None explicitly mentioned on the website, but there is a call-to-action to subscribe for the latest updates, expert insights, and cutting-edge AI innovations.
+
+Additional information:
+
+* Office address: 22 Tudor St, London EC4Y 0AY
+* Registered Address: 1 King William St, London EC4N 7AF
+* Company Number: 10180537
+* Registered in England and Wales
+* Contact email: hello@filament.uk.com
+* Copyright: 2025 Filament Consultancy Group
