@@ -11,7 +11,7 @@ client = OpenAI(
 )
 
 
-def summarize(content, endpoint, dir_name):
+def summarize(content: str, endpoint: str, dir_name: str) -> str:
 
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
