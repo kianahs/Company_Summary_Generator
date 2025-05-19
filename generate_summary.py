@@ -73,7 +73,7 @@ if __name__ == "__main__":
     cleaned_scraped_dir = 'Cleaned scraped Data'
     files_path = os.path.join(root_dir, company, cleaned_scraped_dir)
     dir_name = os.path.join(root_dir, company, new_dir)
-    free_plan = False
+    free_plan = True
 
     if free_plan:
         llm_model = "llama3-70b-8192"

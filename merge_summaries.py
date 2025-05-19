@@ -12,7 +12,7 @@ client = OpenAI(
 )
 
 
-def merge_summaries(summaries: str, dir_name: str, summarize_llm: str) -> str:
+def merge_summaries(client: OpenAI, llm_model: str, summaries: str, dir_name: str, summarize_llm: str) -> str:
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
     current_date = datetime.now().strftime("%B %Y")
@@ -55,7 +55,7 @@ def merge_summaries(summaries: str, dir_name: str, summarize_llm: str) -> str:
         """
 
     response = client.chat.completions.create(
-        model="llama3-70b-8192",
+        model=llm_model,
         messages=[{"role": "user", "content": prompt}],
         temperature=0,
     )
@@ -78,6 +78,20 @@ if __name__ == "__main__":
     files_path = os.path.join(root_dir, company, summaries_dir)
     dir_name = os.path.join(root_dir, company, new_dir)
 
+    free_plan = False
+
+    if free_plan:
+        llm_model = "llama3-70b-8192"
+        client = OpenAI(
+            api_key=os.getenv("GROQ_API_KEY"),
+            base_url="https://api.groq.com/openai/v1",
+        )
+    else:
+        llm_model = "gpt-4.1-mini"
+        client = OpenAI(
+            api_key=os.getenv("OPENAI_API_KEY")
+        )
+
     for model in sorted(os.listdir(files_path)):
         full_path = os.path.join(files_path, model)
         summaries = []
@@ -89,4 +103,5 @@ if __name__ == "__main__":
                 summaries.append(
                     content)
 
-        merge_summaries(summaries, dir_name, model)
+        merge_summaries(client, llm_model, summaries,
+                        os.path.join(dir_name, llm_model), model)
