@@ -34,8 +34,10 @@ Syfter's AI-driven platform helps firms to:
 * Discover and originate new deals
 * Monitor key prospects and receive real-time updates
 * Apply filters to tailor searches and pinpoint precise opportunities
-* Integrate CRM systems to keep data up-to-date and gain accurate insights
-* Centralize all internal and external data into one view
+* Integrate CRM systems and internal documents
+* Gain accurate insights from personalized data warehouses
+
+Overall, Syfter provides a comprehensive platform for private equity firms and corporate finance workflows to leverage AI and machine learning capabilities, streamline their data integration, and improve their deal origination and market monitoring processes.
 
 ## Notable Customers or Company Mentions
 Here is the list of companies or partners mentioned:

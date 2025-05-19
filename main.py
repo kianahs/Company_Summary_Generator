@@ -5,6 +5,7 @@ from generate_summary import summarize
 from merge_summaries import merge_summaries
 import os
 from openai import OpenAI
+from RAG import execute_RAG_pipeline
 
 
 def get_client(free_plan: bool) -> tuple[str, OpenAI]:
@@ -27,6 +28,14 @@ def get_client(free_plan: bool) -> tuple[str, OpenAI]:
 
 async def main():
 
+    pipeline = {
+        "RAG": {
+            "active": True,
+            "free_plan": True
+        },
+        "free_summarizer_llm": True,
+        "free_merger_llm": True
+    }
     endpoints = ['', 'features', 'why-syfter', 'resources',
                  'about-us', 'technical-information', 'contact']
     navbar = [
@@ -37,11 +46,11 @@ async def main():
     company = "filament"
     root_dir = 'Outputs'
 
-    free_summarizer_llm = False
-    free_merger_llm = False
-
-    summarizer_llm_model, summarizer_client = get_client(free_summarizer_llm)
-    merger_llm_model, merger_client = get_client(free_merger_llm)
+    if not pipeline["RAG"]["active"]:
+        summarizer_llm_model, summarizer_client = get_client(
+            pipeline["free_summarizer_llm"])
+        merger_llm_model, merger_client = get_client(
+            pipeline["free_merger_llm"])
 
     summaries = []
 
@@ -57,13 +66,19 @@ async def main():
         clean_text = clean_scraped_text(
             text=markdown, dir_name=os.path.join(
                 root_dir, company, "Cleaned Scraped Data"), endpoint=item, navbar=navbar)
+        if not pipeline["RAG"]["active"]:
+            summary = summarize(client=summarizer_client, llm_model=summarizer_llm_model, content=clean_text, endpoint=item, dir_name=os.path.join(
+                root_dir, company, "Summaries", summarizer_llm_model))
+            summaries.append(summary)
 
-        summary = summarize(client=summarizer_client, llm_model=summarizer_llm_model, content=clean_text, endpoint=item, dir_name=os.path.join(
-            root_dir, company, "Summaries", summarizer_llm_model))
-        summaries.append(summary)
-
-    merge_summaries(client=merger_client, llm_model=merger_llm_model, summaries=summaries, dir_name=os.path.join(
-        root_dir, company, "Final Summary", merger_llm_model), summarize_llm=summarizer_llm_model)
+    if not pipeline["RAG"]["active"]:
+        merge_summaries(client=merger_client, llm_model=merger_llm_model, summaries=summaries, dir_name=os.path.join(
+            root_dir, company, "Final Summary", merger_llm_model), summarize_llm=summarizer_llm_model)
+    else:
+        execute_RAG_pipeline(dir_path=os.path.join(
+            root_dir, company, "Cleaned Scraped Data"),
+            output_dir=os.path.join(
+            root_dir, company, "Final Summary", "RAG"), free_plan=pipeline["RAG"]["free_plan"])
 
 if __name__ == "__main__":
     asyncio.run(main())
