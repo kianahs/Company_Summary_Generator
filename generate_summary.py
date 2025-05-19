@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
+from datetime import datetime
 
 load_dotenv()
 
@@ -14,21 +15,44 @@ def summarize(content, endpoint, dir_name):
 
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
+    current_date = datetime.now().strftime("%B %Y")
 
     prompt = f"""
-              You are a business analyst. Based on the website content below, generate a structured company report with the following sections:
-              1. Company Description : What is the company’s core mission, purpose, and values?
-              2. Products & Services : What does the company offer? What problems do they solve?
-              3. Leadership Team (if available): Who are the key individuals in leadership positions? Provide brief bios where possible.
-              4. Notable Customers or Mentions: List the company names mentioned on a company website. mention if they are if they are a customer, partner etc
-              5. Recent News: What updates, blog posts, or press releases are highlighted on the site?
+                You are a skilled business analyst. Your task is to extract and organize information from a company's website into a clear, structured report.
 
-              --- WEBSITE CONTENT START ---
-              {content}
-              --- WEBSITE CONTENT END ---
+                Please generate a report using the following sections:
 
-              Be concise and informative. Use bullet points where appropriate. if you cant find any of the  the information above just leave that section empty. Include everything you find and its related to each section.
-              """
+                ## Company Description *(if available)*
+                Summarize the company’s core mission, purpose, values, and what they fundamentally stand for.
+
+                ## Products & Services *(if available)*
+                List and briefly describe the main products and/or services the company offers. Include what problems they solve or which industries they serve.
+
+                ## Leadership Team *(if available)*
+                Identify key individuals in leadership positions. For each, provide their name, title, and a brief background or bio.
+
+                ## Notable Customers or Company Mentions *(if available)*
+                Mention all other companies referenced on the site. Specify whether they are customers, partners, or otherwise associated.
+
+                ## Recent News or Updates *(if available) -  current date is {current_date}*
+                Summarize recent blog posts, press releases, or updates mentioned on the site.
+
+                ### Website Content:
+                {content}
+             
+
+                **Instructions:**
+                - Format the output as a clean and well-structured **Markdown (.md)** report.
+                - Use `##` headers to separate each major section.
+                - Present content using bullet points or short, clear paragraphs for readability.
+                - Avoid repeating the same information across multiple sections.
+                - Do **not** fabricate, infer, or hallucinate any information not explicitly present in the input.
+                - Be concise and factually accurate.
+                - Include all relevant details found in the input that belong to each section.
+                - If a section has no available information, leave it blank.
+                - Return only the final Markdown-formatted report. Do not include explanations, comments, or system messages.
+
+                """
 
     response = client.chat.completions.create(
         model="llama3-70b-8192",

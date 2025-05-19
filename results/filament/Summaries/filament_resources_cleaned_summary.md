@@ -1,41 +1,37 @@
-Here is the structured company report:
+Here is the report in Markdown format:
 
-**Company Description:**
-Filament Syfter is an AI-enabled data curation hub for private markets. The company's core mission, purpose, and values are not explicitly stated on the website. However, based on the content, it can be inferred that the company is committed to innovation, expertise, and customer-centric solutions.
+## Company Description
 
-**Products & Services:**
-Filament Syfter offers AI-enabled data curation solutions, including:
+Filament Syfter is an AI-enabled data hub for private markets, providing a data curation platform for private equity firms.
 
-* Deal Origination Solution
-* Private Equity CRM Solutions
-* Integrated Data Platform
-* Proprietary Machine Learning models
-* AI-Enabled Data Curation Hub for Private Markets**
+## Products & Services
 
-The company solves problems related to data overload, deal sourcing, and private equity technology stack.
+* AI-enabled data curation platform for private markets
+* Deal origination solution
+* Equity CRM solutions
+* Integrated data platform
+* Proprietary machine learning models
+* AI innovations for private equity firms
 
-**Leadership Team:**
-No specific information is available on the leadership team. However, Phil Westcott is mentioned in an article, "Interview with Phil Westcott: Exploring AI's Impact on PE," but no bio is provided.
+## Leadership Team
 
-**Notable Customers or Mentions:**
-The following companies are mentioned on the website:
+* Phil Westcott (no title mentioned)
+
+## Notable Customers or Company Mentions
 
 * Silversmith Capital Partners (partner)
-* Valu8 (partner)
+* S&P Global Market Intelligence (collaboration)
+* Valu8 (webinar partner)
 * SourceScrub (partner)
-* Accelex (partner)
-* Calibrating Machine Learning Models (customer/partner not specified)
+* Accelex (award winner)
+* The Business Magazine (award winner)
+* CogX Awards (award winner)
+* South Coast Tech Awards (award winner)
 
-**Recent News:**
-The following updates, blog posts, or press releases are highlighted on the site:
+## Recent News or Updates
 
-* "The top four tech priorities on every CTO's mind" (May 1, 2025)
-* "The AI Revolution in Private Equity: From Data Overload to Intelligent Insights" (February 27, 2025)
-* "Automating the Deal engine – a new category in the PE technology stack" (February 10, 2025)
-* "Year in Review: Filament Syfter's Highlights" (December 20, 2024)
-* "Filament Syfter Wins Deal Origination Solution of the Year" (November 26, 2024)
-* "Interview with Phil Westcott: Exploring AI's Impact on PE" (September 12, 2024)
-* "Looking Beyond The Hype: Unlocking AI's Potential in Private Equity in 2024" (August 30, 2024)
-* "Silversmith Capital Partners and Filament Partner to Drive Innovation in Growth Equity Sourcing" (June 6, 2024)
-
-Note: The report only includes information available on the provided website content.
+* May 1, 2025: The top four tech priorities on every CTO's mind
+* February 27, 2025: The AI Revolution in Private Equity: From Data Overload to Intelligent Insights
+* February 10, 2025: Automating the Deal engine – a new category in the PE technology stack
+* December 20, 2024: Year in Review: Filament Syfter's Highlights
+* November 26, 2024: Filament Syfter Wins Deal Origination Solution of the Year

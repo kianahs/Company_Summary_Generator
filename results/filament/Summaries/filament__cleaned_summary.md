@@ -1,45 +1,23 @@
-Here is the structured company report:
+Here is the report in Markdown format:
 
-**Company Description**
+## Company Description
+Filament Syfter is an AI-enabled data curation hub for private markets, providing a white-labelled AI-driven proprietary platform for deal origination and market monitoring.
 
-* Core Mission: To provide an AI-driven proprietary platform for deal origination and market monitoring, enabling private equity firms to discover and originate new deals.
-* Purpose: To empower private equity firms with AI-driven insights to make better investment decisions.
-* Values: Not explicitly stated, but can be inferred as:
-	+ Emphasis on innovation and adoption of AI technology
-	+ Focus on customer success and partnership
-	+ Commitment to data privacy and security
+## Products & Services
+* Deal Origination and Market Monitoring Platform: A proprietary platform that helps private equity firms discover and originate new deals, monitor key prospects, and market map opportunities.
+* AI Advantage: Leverages AI and ML models to quickly identify high-potential opportunities and accelerate research, improving speed to market.
+* GenAI-Powered Email Insights: Provides real-time updates and automated alerts tailored to users and their teams.
+* Expert Support: Offers a comprehensive, hands-on approach to developing and implementing proprietary AI deal origination and market monitoring platforms.
 
-**Products & Services**
-
-* Syfter: A white-labelled AI-driven proprietary platform for deal origination and market monitoring
-* Features:
-	+ Deal discovery and origination
-	+ Market monitoring and tracking
-	+ Data integration and centralization
-	+ AI-driven scoring criteria
-	+ GenAI-powered email insights
-* Problems solved:
-	+ Scaling deal discovery and origination
-	+ Improving investment decisions
-	+ Enhancing speed to market
-	+ Consolidating external and internal data
-
-**Leadership Team**
-
+## Leadership Team
 * Phil Westcott: CEO and Founder
-	+ Quote: "Every managing partner in PE is looking for alpha, the edge in the market that drives the best returns for LP's. The adoption of AI is powering that edge"
 
-**Notable Customers or Mentions**
+## Notable Customers or Company Mentions
+* Cavendish
+* Astorg
+* Silversmith Capital Partners
 
-* Cavendish (CEO: John Farrugia)
-* Astorg (Partner: Charles-Hubert Le Baron)
-* Silversmith Capital Partners (CTO: Bryan Landerman)
-
-**Recent News**
-
-* Award wins:
-	+ Deal Origination Solution of the Year 2024
-	+ Best AI Product in the FS/Fintech category
-	+ Emerging Tech Company of The Year at the South Coast Tech Awards
-* Blog updates and expert insights available through subscription
-* Quick demo video of Syfter available on the website
+## Recent News or Updates
+* Winners of Deal Origination Solution of the Year" 2024
+* Winners of Best AI Product in the FS/Fintech category
+* Winners of the "Emerging Tech Company of The Year" South Coast Tech Awards

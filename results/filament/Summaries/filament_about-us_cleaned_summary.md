@@ -1,44 +1,24 @@
-Here is the structured company report:
+Here is the report in Markdown format:
 
-**Company Description**
+## Company Description
+Filament Syfter is a company that demystifies AI, founded by Phil Westcott, who led the team that launched IBM Watson in Europe. The company aims to help businesses navigate the sea of unproven consultants and agencies claiming to provide AI solutions.
 
-* Core mission: Demystify AI and help businesses navigate the complex landscape
-* Purpose: Provide a unique data integration and AI platform, Syfter, to fully productionize the use of AI in Private Equity and Corporate Finance workflows
-* Values: Not explicitly stated, but implied values include innovation, trust, expertise, and customer-centricity
+## Products & Services
+* Syfter: a product that encompasses the features and functionality required to fully productionize the use of AI in Private Equity and Corporate Finance workflows.
 
-**Products & Services**
+## Leadership Team
+* Phil Westcott, Chief Executive Officer: former Director at IBM, specialist in applied Artificial Intelligence, and a regular speaker on the convergence of entrepreneurship.
+* Emma Luetchford, Chief Operating Officer: over 20 years of experience leading marketing, data, product, and tech teams, with a specialism in scaling up and professionalizing functions.
+* Martin Pomeroy, Tech Co-Founder: over a decade of experience building and launching internal knowledge management platforms for large enterprise companies.
 
-* Syfter: A product that encompasses the features and functionality required to fully productionize the use of AI in Private Equity and Corporate Finance workflows
-* Custom AI-powered software applications for enterprise clients
-* Problem-solving: Helps businesses navigate the complex landscape, provides targeted product development, and takes the risk and cost out of testing new technology
+## Notable Customers or Company Mentions
+* IBM
+* Tesco
+* Unilever
+* Bupa
+* AstraZeneca
+* Electronic Arts
+* Mondelez International
 
-**Leadership Team**
-
-* Phil Westcott, Chief Executive Officer
-	+ Former Director at IBM
-	+ Specialist in applied Artificial Intelligence
-	+ Ran the IBM Watson platform in Europe
-	+ Led IBM's global IoT practice
-	+ Regular speaker on the convergence of tech and entrepreneurship
-	+ Chartered Engineer and holds an MBA from IESE and Columbia business schools
-* Emma Luetchford, Chief Operating Officer
-	+ Over 20 years' experience leading marketing, data, product, and tech teams
-	+ Specialist in scaling up and professionalising functions in fast-growth companies
-	+ Part of the leadership team of a price reporting, market data, and forecasting business
-* Martin Pomeroy, Tech Co-Founder
-	+ Over a decade of experience building and launching internal knowledge management platforms for large enterprise companies
-	+ Key solution architect and delivery lead for a highly successful Office 365 agency
-	+ Switched attention to the emerging field of AI in 2014
-
-**Notable Customers or Mentions**
-
-* IBM (partner/previous employer)
-* Unilever (previous client)
-* Tesco (previous client)
-* AstraZeneca (previous client)
-* Electronic Arts (previous client)
-* Mondelez International (previous client)
-
-**Recent News**
-
-* No specific news articles or press releases are highlighted on the site. However, there is a call-to-action to "Stay Updated!" for the latest updates on Filament Syfter, expert insights, and cutting-edge AI innovations.
+## Recent News or Updates
+* No recent news or updates mentioned on the site as of May 2025.
