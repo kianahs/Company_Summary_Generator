@@ -17,7 +17,7 @@ def detect_nav_and_endpoints(base_url: str) -> Tuple[List[str], List[str]]:
 
     nav_labels = set()
     endpoint_paths = set()
-
+    endpoint_paths.add('')
     domain = urlparse(base_url).netloc
 
     for a_tag in soup.find_all("a", href=True):
