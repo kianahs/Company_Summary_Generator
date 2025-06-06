@@ -1,5 +1,6 @@
-from crawl import crawl_website
+import sys
 import asyncio
+from crawl import crawl_website
 from clean import clean_scraped_text
 from generate_summary import summarize
 from merge_summaries import merge_summaries
@@ -8,8 +9,6 @@ from auto_detect import detect_nav_and_endpoints
 import os
 from openai import OpenAI
 from RAG import execute_RAG_pipeline
-import json
-import argparse
 from datetime import datetime
 
 
@@ -96,5 +95,7 @@ async def main(company, url, free_plan):
 
 
 if __name__ == "__main__":
+    if sys.platform.startswith("win") and sys.version_info < (3, 10):
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     asyncio.run(main(company="FilamentXYZ",
                 url="https://filament.ai", free_plan=True))
