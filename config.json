@@ -1,7 +1,7 @@
 {
   "pipeline": {
     "RAG": {
-      "active": true,
+      "active": false,
       "free_plan": true
     },
     "free_summarizer_llm": true,
@@ -17,5 +17,5 @@
   ],
   "url": "https://filament.ai",
   "company": "filament",
-  "root_dir": "Outputs"
+  "root_dir": "Outputs2"
 }
