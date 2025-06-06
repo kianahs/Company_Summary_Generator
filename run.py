@@ -40,6 +40,9 @@ async def main(company, url, free_plan):
     buffer_ratio = 0.75
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     endpoints, navbar = detect_nav_and_endpoints(url)
+    print("Found Endpoints:\n", endpoints)
+
+    print("Found Navbar Items:\n", navbar)
     root_dir = f"Output_{timestamp}"
 
     model_name, llm_client = get_client(
@@ -50,7 +53,7 @@ async def main(company, url, free_plan):
     max_tokens = 0
 
     cleaned_texts = []
-
+    faulty_endpoints = []
     for item in endpoints:
         try:
             markdown = await crawl_website(
@@ -60,8 +63,9 @@ async def main(company, url, free_plan):
                 dir_name=os.path.join(root_dir, company, "Scraped Data")
             )
         except Exception as e:
-            print(f"Skipping endpoint '{item}' due to error: {e}")
-            endpoints.remove(item)
+            print(f"Skipping endpoint '{item}' due to error")
+            # endpoints.remove(item)
+            faulty_endpoints.append(item)
             continue
 
         clean_text = clean_scraped_text(
@@ -69,7 +73,7 @@ async def main(company, url, free_plan):
         cleaned_texts.append(clean_text)
         max_tokens = max(max_tokens, count_tokens(
             clean_text, model=model_name))
-
+    endpoints = [item for item in endpoints if item not in faulty_endpoints]
     use_rag = max_tokens > model_context_limit
     print(
         f"Free plan: {free_plan}\nModel: {model_name}\nContext limit (Buffer ratio: {buffer_ratio}): {model_context_limit}\nMax tokens per call: {max_tokens}\nRAG? {use_rag}\n")
@@ -77,13 +81,13 @@ async def main(company, url, free_plan):
     if use_rag:
         execute_RAG_pipeline(dir_path=os.path.join(root_dir, company, "Cleaned Scraped Data"),
                              output_dir=os.path.join(
-            root_dir, company, "Final Summary", "RAG"), free_plan=pipeline["RAG"]["free_plan"])
+            root_dir, company, "Final Summary", "RAG"), free_plan=free_plan)
 
     else:
         summaries = []
-        for clean_text in cleaned_texts:
+        for i, clean_text in enumerate(cleaned_texts):
 
-            summary = summarize(client=llm_client, llm_model=model_name, content=clean_text, endpoint=item, dir_name=os.path.join(
+            summary = summarize(client=llm_client, llm_model=model_name, content=clean_text, endpoint=endpoints[i], dir_name=os.path.join(
                 root_dir, company, "Summaries", model_name))
             summaries.append(summary)
 
