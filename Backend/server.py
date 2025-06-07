@@ -4,7 +4,15 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from run import main
 
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Vite default
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class RequestData(BaseModel):
@@ -22,10 +30,12 @@ async def startup_event():
 @app.post("/run")
 async def run_summary(data: RequestData):
     try:
-        await main(company=data.company, url=data.url, free_plan=data.free_plan)
+        summary = await main(company=data.company, url=data.url, free_plan=data.free_plan)
+        # return {"message": f"Summary generation for {len(summary)} complete!", }
         return {
             "message": f"Summary generation for {data.company} complete!",
-            "model": "llama3-70b-8192" if data.free_plan else "gpt-4.1-mini"
+            "model": "llama3-70b-8192" if data.free_plan else "gpt-4.1-mini",
+            "summary": summary
         }
     except Exception as e:
         return {"error": str(e)}

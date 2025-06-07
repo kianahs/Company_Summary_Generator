@@ -90,8 +90,9 @@ async def main(company, url, free_plan):
                 root_dir, company, "Summaries", model_name))
             summaries.append(summary)
 
-        merge_summaries(client=llm_client, llm_model=model_name, summaries=summaries, dir_name=os.path.join(
+        final_summary = merge_summaries(client=llm_client, llm_model=model_name, summaries=summaries, dir_name=os.path.join(
             root_dir, company, "Final Summary", model_name), summarize_llm=model_name)
+    return final_summary
 
 
 if __name__ == "__main__":
